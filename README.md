@@ -108,7 +108,7 @@ Stage 5: Interpretation & Presentation of Results
 
   Executive Summary: "Our analysis of 10,000 headphone reviews found that 70% of negative feedback is related to battery life and connectivity, while positive reviews consistently praise sound quality and comfort."
   
- *Key Findings:*
+ *1. Key Findings:*
 
    Sentiment Distribution: "X% of reviews are positive, Y% are negative."
   
@@ -116,10 +116,10 @@ Stage 5: Interpretation & Presentation of Results
 
    What are the Pain Points? Show the top words from negative reviews and the topics associated with low ratings. (e.g., "The topic 'Battery Life' appears in 40% of all 1-star reviews").
 
-  *Actionable Recommendations:*
+  *2. Actionable Recommendations:*
 
    "Prioritize R&D on improving battery technology, as it is the single largest cause of negative feedback."
   
    "Marketing should emphasize our product's superior sound quality and comfort, as these are our strongest brand assets."
 
-"Update the product description to more accurately reflect battery performance to manage customer expectations."
+   "Update the product description to more accurately reflect battery performance to manage customer expectations."
