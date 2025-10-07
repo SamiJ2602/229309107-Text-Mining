@@ -10,72 +10,74 @@
 
 **The Text Mining Pipeline for This Project:**
 
-  Stage 1: Data Acquisition & Problem Definition
+Stage 1: Data Acquisition & Problem Definition
     
-    Find your data: You can easily get a dataset for this.
+  Find your data: You can easily get a dataset for this.
     
-    Best Option (Real-world data): Use the Amazon Product Reviews dataset from Kaggle (https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews). It's huge, so pick a specific category (e.g., "Electronics," "Books," "Health and Personal Care").
+  Best Option (Real-world data): Use the Amazon Product Reviews dataset from Kaggle (https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews). It's huge, so pick a specific category (e.g., "Electronics," "Books," "Health and Personal Care").
     
-    Simpler Alternative: Use a pre-built dataset like the "Yelp Reviews" dataset, often used for sentiment analysis practice.
+  Simpler Alternative: Use a pre-built dataset like the "Yelp Reviews" dataset, often used for sentiment analysis practice.
     
-    Define the Scope: Decide on the specific product category. For example: "We will analyze reviews for Bluetooth headphones."
+  Define the Scope: Decide on the specific product category. For example: "We will analyze reviews for Bluetooth headphones."
 
-  Stage 2: Data Preprocessing & Cleaning (The Most Crucial Step)
+Stage 2: Data Preprocessing & Cleaning (The Most Crucial Step)
   
-    Raw text is messy. You need to clean it and convert it into a structured format.
+  Raw text is messy. You need to clean it and convert it into a structured format.
     
-    **Tasks:** Handle Missing Data: Remove reviews with missing text or ratings.
+**Tasks:** Handle Missing Data: Remove reviews with missing text or ratings.
     
-    **Basic Cleaning:**
+**Basic Cleaning:**
     
-      Convert text to lowercase ("Great" and "great" are the same word).
+  Convert text to lowercase ("Great" and "great" are the same word).
       
-      Remove punctuation, special characters, and numbers (unless numbers are important, e.g., "battery lasted 2 hours").
+  Remove punctuation, special characters, and numbers (unless numbers are important, e.g., "battery lasted 2 hours").
       
-      Remove extra whitespace.
+  Remove extra whitespace.
     
-    **Text Normalization (NLP Techniques):**
+**Text Normalization (NLP Techniques):**
     
-      *Tokenization:* Split sentences into individual words or tokens.
+  *Tokenization:* Split sentences into individual words or tokens.
       
-      *Stopword Removal:* Remove common words that carry little meaning (e.g., "the," "and," "is," "in").
+  *Stopword Removal:* Remove common words that carry little meaning (e.g., "the," "and," "is," "in").
       
-      *Lemmatization (Preferred) or Stemming:* Reduce words to their base or root form.
+  *Lemmatization (Preferred) or Stemming:* Reduce words to their base or root form.
       
-      *Lemmatization:* "running" -> "run", "better" -> "good" (contextually accurate).
+  *Lemmatization:* "running" -> "run", "better" -> "good" (contextually accurate).
       
-      *Stemming:* "running" -> "run", "troubling" -> "troubl" (cruder, faster).
+  *Stemming:* "running" -> "run", "troubling" -> "troubl" (cruder, faster).
 
 Stage 3: Exploratory Data Analysis (EDA) & Feature Engineering
-Understand your data before building complex models.
 
-Tasks:
+  Understand your data before building complex models.
 
-Basic Statistics:
+**Tasks:**
 
-Distribution of star ratings (e.g., how many 5-star vs. 1-star reviews?).
+1. Basic Statistics:
+  
+  Distribution of star ratings (e.g., how many 5-star vs. 1-star reviews?).
+  
+  Average review length (in words/characters).
 
-Average review length (in words/characters).
+2. Visualization:
 
-Visualization:
+  *WordCloud:* Generate a WordCloud for positive reviews and one for negative reviews. This gives an immediate visual of the most frequent words in each category.
+  
+  *Bar Charts:* Plot the top 20 most frequent words (after cleaning).
 
-WordCloud: Generate a WordCloud for positive reviews and one for negative reviews. This gives an immediate visual of the most frequent words in each category.
+3. Feature Engineering:
 
-Bar Charts: Plot the top 20 most frequent words (after cleaning).
+  Create Labels for Sentiment: Use the rating column to create a sentiment label.
+  
+   Example: 4-5 Stars = "Positive", 3 Stars = "Neutral", 1-2 Stars = "Negative".
 
-Feature Engineering:
+  Vectorization: Convert the cleaned text into numbers that a model can understand.
+  
+   *Bag-of-Words (CountVectorizer):* Simple, counts word frequencies.
 
-Create Labels for Sentiment: Use the rating column to create a sentiment label.
-
-Example: 4-5 Stars = "Positive", 3 Stars = "Neutral", 1-2 Stars = "Negative".
-
-Vectorization: Convert the cleaned text into numbers that a model can understand.
-
-Bag-of-Words (CountVectorizer): Simple, counts word frequencies.
-
-TF-IDF (TfidfVectorizer): Better. Weights words by how important they are (frequent in a document but rare across the whole collection).
+   *TF-IDF (TfidfVectorizer):* Better. Weights words by how important they are (frequent in a document but rare across the whole collection).
 
 Stage 4: Model Building & Analysis
+
 This is where you apply the core text mining techniques.
 
 Task 1: Sentiment Analysis (Classification)
