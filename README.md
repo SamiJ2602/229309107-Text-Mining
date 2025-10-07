@@ -78,59 +78,48 @@ Stage 3: Exploratory Data Analysis (EDA) & Feature Engineering
 
 Stage 4: Model Building & Analysis
 
-This is where you apply the core text mining techniques.
+  This is where you apply the core text mining techniques.
 
-Task 1: Sentiment Analysis (Classification)
+**Task 1: Sentiment Analysis (Classification)**
 
-Goal: Build a model that can predict the sentiment of a new, unseen review.
+  Goal: Build a model that can predict the sentiment of a new, unseen review.
+  
+  Models to Try:
+  
+    Naive Bayes (MultinomialNB): A classic and very effective algorithm for text classification.
+    
+    Logistic Regression: Another strong, interpretable baseline.
+    
+    Support Vector Machines (SVM): Often performs very well on text data.
+    
+    Evaluation: Split your data into training and testing sets. Report metrics like Accuracy, Precision, Recall, and F1-Score.
 
-Models to Try:
+**Task 2: Topic Modeling (Unsupervised Learning)**
 
-Naive Bayes (MultinomialNB): A classic and very effective algorithm for text classification.
+  Goal: To discover the hidden "topics" or themes that customers discuss, without using the ratings.
 
-Logistic Regression: Another strong, interpretable baseline.
-
-Support Vector Machines (SVM): Often performs very well on text data.
-
-Evaluation: Split your data into training and testing sets. Report metrics like Accuracy, Precision, Recall, and F1-Score.
-
-Task 2: Topic Modeling (Unsupervised Learning)
-
-Goal: To discover the hidden "topics" or themes that customers discuss, without using the ratings.
-
-Technique: LDA (Latent Dirichlet Allocation)
-
-You provide the algorithm with the cleaned text and tell it to find, for example, 5 topics.
-
-It will return a set of words that define each topic.
-
-Interpretation is key! You have to look at the top words for a topic and label it. For a headphone review, topics might be:
-
-Topic 1: ["battery", "life", "charge", "hour"] -> "Battery Life"
-
-Topic 2: ["sound", "quality", "bass", "clear"] -> "Sound Quality"
-
-Topic 3: ["comfort", "ear", "fit", "size"] -> "Comfort & Fit"
+  Technique: LDA (Latent Dirichlet Allocation)
 
 Stage 5: Interpretation & Presentation of Results
-This is where you turn your analysis into a story.
 
-Create a final report or a simple dashboard (using Tableau/Power BI/Streamlit):
+  This is where you turn your analysis into a story.
 
-Executive Summary: "Our analysis of 10,000 headphone reviews found that 70% of negative feedback is related to battery life and connectivity, while positive reviews consistently praise sound quality and comfort."
+**Create a final report or a simple dashboard (using Tableau/Power BI/Streamlit):**
 
-Key Findings:
+  Executive Summary: "Our analysis of 10,000 headphone reviews found that 70% of negative feedback is related to battery life and connectivity, while positive reviews consistently praise sound quality and comfort."
+  
+ *Key Findings:*
 
-Sentiment Distribution: "X% of reviews are positive, Y% are negative."
+   Sentiment Distribution: "X% of reviews are positive, Y% are negative."
+  
+   What Drives Satisfaction? Show the top words from positive reviews and the topics associated with high ratings.
 
-What Drives Satisfaction? Show the top words from positive reviews and the topics associated with high ratings.
+   What are the Pain Points? Show the top words from negative reviews and the topics associated with low ratings. (e.g., "The topic 'Battery Life' appears in 40% of all 1-star reviews").
 
-What are the Pain Points? Show the top words from negative reviews and the topics associated with low ratings. (e.g., "The topic 'Battery Life' appears in 40% of all 1-star reviews").
+  *Actionable Recommendations:*
 
-Actionable Recommendations:
-
-"Prioritize R&D on improving battery technology, as it is the single largest cause of negative feedback."
-
-"Marketing should emphasize our product's superior sound quality and comfort, as these are our strongest brand assets."
+   "Prioritize R&D on improving battery technology, as it is the single largest cause of negative feedback."
+  
+   "Marketing should emphasize our product's superior sound quality and comfort, as these are our strongest brand assets."
 
 "Update the product description to more accurately reflect battery performance to manage customer expectations."
